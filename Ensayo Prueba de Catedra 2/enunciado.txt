@@ -1,0 +1,6 @@
+Enunciado:
+Una empresa China d desarrollo tecnologicoen razon a un bloqueo comercial ha sufrido grandes perdidas de patrimonio, capital y ventas. Es por ello, que ha decidido cambiar su razon social
+y ahora se llamara "Juagey". Esta empresa necesita un nuevo sistema para poder organizar sus sucursales y ventas, para ello:
+
+- La empresa tiene el nombre de su gerente y dos referencias, La primera hacia los productos que vende la compania y la segunda hacia las sucursales que tiene mundialmente.
+- Los productos son manejados a traves 
