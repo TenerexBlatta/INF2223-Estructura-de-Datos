@@ -1,6 +1,14 @@
 Enunciado:
-Una empresa China d desarrollo tecnologicoen razon a un bloqueo comercial ha sufrido grandes perdidas de patrimonio, capital y ventas. Es por ello, que ha decidido cambiar su razon social
+Una empresa China de desarrollo tecnologicoen razon a un bloqueo comercial ha sufrido grandes perdidas de patrimonio, capital y ventas. Es por ello, que ha decidido cambiar su razon social,
 y ahora se llamara "Juagey". Esta empresa necesita un nuevo sistema para poder organizar sus sucursales y ventas, para ello:
 
 - La empresa tiene el nombre de su gerente y dos referencias, La primera hacia los productos que vende la compania y la segunda hacia las sucursales que tiene mundialmente.
-- Los productos son manejados a traves 
+- Los productos son manejados a traves de una lista simplemente enlazada circular. Cada producto tiene codigo, nombre, valor en dolares y tipo.
+- Cada sucursal tiene numero id, pais, nombre del encargado de la sucursal y un arreglo compacto de tamano maxVentas que contiene refereencias a las  ventas que ha realizado la sucursal. Las sucursales se manejan a traves de una lista doblemente enlazada
+- Cada venta tiene codigo unico, fecha y un arreglo de tamano maxProductos de referencias a los productos vendidos en esa boleta.
+
+
+Se pide implementar la siguente funcion:
+struct Sucursal * quitarSucursalMenosVentas(struct Juagey *HW)
+
+Esta funcion recibe por parametro una referencia a la empresa Juaguey y debe quitar la sucursal que tiene el monto menor acumulado en ventas. Para ello, debera determinar cual es la sucursal que tiene el monto acumulado en ventas menor en todo el sistema, quitarla de la lista y luego retornar un puntero a la sucursal quitada. en caso de empate quita la primera. En caso de fracaso retorna NULL. No puede asumir que todas las sucursales tienen montos acumulados >= 0. No puede usar arreglos ni listas auxiliares
