@@ -1,8 +1,6 @@
 <h1 align="center">Extra howdy!, Welcome to my University repository!</h1>
 <h3 align="center">Everything here is treated with seriousness and following each principle of morality and ethics, behave!.</h3>
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=tenerexblatta" alt="tenerexblatta" /></a> </p>
-
 - 🔭 Welcome to **Data Structure**!
 - 📫 How to reach me **tenerexblatta@gmail.com**
 
