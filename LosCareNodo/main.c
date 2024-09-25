@@ -36,8 +36,23 @@ struct Robo{
     struct Banco *bancoRobado;
 };
 
-int recorrerBancos(struct NodoBanco *bancosRecorridos) {
+int recorrerLadron(struct NodoLadron *ladronesRecorridos, struct NodoBanco *banco){
+    struct NodoLadron * rec = ladronesRecorridos;
+    int robosDelBanco = 0;
+    
+    if(){}
 
+    return robosDelBanco;
+}
+
+int recorrerBancos(struct NodoBanco *bancosRecorridos) {
+    struct NodoBanco * rec = bancosRecorridos;
+    if(bancosRecorridos != null) {
+        while(rec->sig != null) {
+        
+            
+        }
+    }
     
 }
 
