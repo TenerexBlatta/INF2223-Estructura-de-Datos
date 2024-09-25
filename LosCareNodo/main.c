@@ -36,28 +36,31 @@ struct Robo{
     struct Banco *bancoRobado;
 };
 
-struct buscarBancosRobados *buscarBancosRobados(struct BancoPreviamenteRobados *bancosRobados, struct Banco *banco) {
+int recorrerBancos(struct NodoBanco *bancosRecorridos) {
 
-  
+    
 }
 
-struct NodoBanco * getBancosMasRobados(struct BandaCriminal *losCareNodo, struct ) {
-  struct NodoBanco *recBancoRobados = ;
+
+struct NodoBanco * getBancosMasRobados(struct BandaCriminal *losCareNodo){
+  struct NodoBanco *recListaBancos = losCareNodo->headBancos;
   struct NodoBanco *bancosMasRobados;
 
   
   if(losCareNodo != NULL) {
-
+    while(
 
 
     return bancosMasRobados;
     
-  } else {return NULL;}
+  } else {
+      return NULL;
+  }
 }
 
 
 
 int main(void) {
     struct BandaCriminal losCareNodo;
-    
+    printf("congrats, at least u reached the main function lmao.");
 }
