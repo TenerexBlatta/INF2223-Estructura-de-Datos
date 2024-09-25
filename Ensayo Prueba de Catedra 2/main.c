@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MaxVentas 
-#define MaxProductos
+#define MaxVentas 3000
+#define MaxProductos 3000
 
 struct Juaguey {
   char *nombreGerente;
@@ -49,6 +49,7 @@ struct Sucursal * quitarSucursalConMenosVentas(struct Juaguey * Hw) {
   struct NodoSucursal *sucursalMenosVentas = NULL;
   float menorVenta = -1;
   float totalVenta;
+  struct Sucursal *eliminar = NULL;
 
   if (HW == NULL || HW->headSucursales == NULL {
     return NULL;
@@ -67,9 +68,19 @@ struct Sucursal * quitarSucursalConMenosVentas(struct Juaguey * Hw) {
     rec->ant->sig = rec->sig;
   } else {
     HW->headSucursales = rec->sig;
+    HW->headSucursales->ant = NULL;
   }
+
+  if(rec->sig != NULL){
+    rec->sig->ant = rec->ant;
+    
+  } // el rec esta equivocado.
+
+  eliminar = sucursalMenosVentas->sucursal;
   
-}
+  return eliminar;
+
+} // Cierre de funcion
 
 
 
