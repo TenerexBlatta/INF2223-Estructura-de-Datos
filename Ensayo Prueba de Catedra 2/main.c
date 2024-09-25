@@ -74,7 +74,7 @@ struct Sucursal * quitarSucursalConMenosVentas(struct Juaguey * Hw) {
   if(rec->sig != NULL){
     rec->sig->ant = rec->ant;
     
-  } // el rec esta equivocado.
+  } // el rec esta equivocado corregir post clase.
 
   eliminar = sucursalMenosVentas->sucursal;
   
