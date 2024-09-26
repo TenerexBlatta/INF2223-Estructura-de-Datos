@@ -44,17 +44,46 @@ struct Venta{
   struct Producto **productos;
 };
 
-struct Sucursal * quitarSucursalConMenosVentas(struct Juaguey * Hw) {
+float calcularValorSucursal(struct Sucursal *sucursal) {
+    float totalValor = 0.0; // Variable para almacenar el valor total
+    int i, j;
+
+    // Verificamos si la sucursal es NULL
+    if (sucursal == NULL || sucursal->ventas == NULL) {
+        return totalValor; // Retornamos 0 si no hay ventas
+    }
+
+    // Iteramos sobre las ventas de la sucursal
+    for (i = 0; i < MaxVentas; i++) {
+        if (sucursal->ventas[i] == NULL) {
+            break; // Si encontramos un puntero NULL, salimos del bucle
+        }
+
+        // Iteramos sobre los productos en cada venta
+        for (j = 0; j < MaxProductos; j++) {
+            if (sucursal->ventas[i]->productos[j] == NULL) {
+                break; // Si encontramos un puntero NULL, salimos del bucle
+            }
+
+            // Acumulamos el valor de cada producto
+            totalValor += sucursal->ventas[i]->productos[j]->valor;
+        }
+    }
+
+    return totalValor; // Retornamos el valor total calculado
+}
+
+struct Sucursal * quitarSucursalConMenosVentas(struct Juaguey * HW) {
   struct NodoSucursal *rec = HW->headSucursales;
   struct NodoSucursal *sucursalMenosVentas = NULL;
   float menorVenta = -1;
   float totalVenta;
   struct Sucursal *eliminar = NULL;
 
-  if (HW == NULL || HW->headSucursales == NULL {
+  if (HW == NULL || HW->headSucursales == NULL) {
     return NULL;
   }
-
+  
   while(rec != NULL) {
     totalVenta = calcularValorSucursal(rec->sucursal);
 
@@ -81,8 +110,6 @@ struct Sucursal * quitarSucursalConMenosVentas(struct Juaguey * Hw) {
   return eliminar;
 
 } // Cierre de funcion
-
-
 
 int main(void) {
   
