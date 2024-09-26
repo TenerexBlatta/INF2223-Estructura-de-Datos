@@ -64,15 +64,15 @@ struct Sucursal * quitarSucursalConMenosVentas(struct Juaguey * Hw) {
     }
     rec = rec->sig;
   }
-  if(rec->ant != NULL){
-    rec->ant->sig = rec->sig;
+  if(sucursalMenosVentas->ant != NULL){
+    sucursalMenosVentas->ant->sig = sucursalMenosVentas->sig;
   } else {
-    HW->headSucursales = rec->sig;
+    HW->headSucursales = sucursalMenosVentas->sig;
     HW->headSucursales->ant = NULL;
   }
 
-  if(rec->sig != NULL){
-    rec->sig->ant = rec->ant;
+  if(sucursalMenosVentas->sig != NULL){
+    sucursalMenosVentas->sig->ant = sucursalMenosVentas->ant;
     
   } // el rec esta equivocado corregir post clase.
 
