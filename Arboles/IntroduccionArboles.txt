@@ -2,6 +2,12 @@ Estructura de Datos:
 
 Trabajaremos con arboles binarios de busqueda.
 
-Se inicia como un struct,
+-> Se inicia como un struct.
+-> Comienza su valor en null.
 
+Struct NodoArbol {
+  int datoDeEjemplo;
+  NodoArbol *izq;
+  NodoArbol *der;
+}
 
